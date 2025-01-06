@@ -19,6 +19,23 @@
                 "username": "YOUR LDP LOGIN OR MACHINE GOES HERE!",
                 "password": "YOUR LDP PASSWORD GOES HERE!",
                 "signon_control":true
+            },
+            "ldpv2":{
+                "client_id": "Service-ID (Client ID V2)",
+                "client_secret": "Client Secret",
+                "signon_control":true,
+                "app-key": ""
+            },
+            "deployed": {
+                "app-key": "YOUR APP KEY GOES HERE!",
+                "realtime-distribution-system": {
+                    "url" : "YOUR DEPLOYED HOST:PORT GOES HERE!",
+                    "dacs" : {
+                        "username" : "YOUR DACS ID GOES HERE!",
+                        "application-id" : 256,
+                        "position" : ""
+                    }
+                }
             }
         }
     }

@@ -7,6 +7,7 @@
 
 
 #!/usr/bin/env python
+import sys
 import lseg.data as ld
 from lseg.data.delivery import omm_stream
 import datetime
@@ -20,6 +21,11 @@ import binascii
 _news_envelopes = []
 RIC_CODE = 'MRN_STORY'
 DOMAIN = 'NewsTextAnalytics'
+SERVICE = 'ELEKTRON_DD'
+
+# Config the encoding for the console
+sys.stdin.reconfigure(encoding='utf-8')
+sys.stdout.reconfigure(encoding='utf-8')
 
 # Retrieve data
 # Callback function to display data or status events
@@ -118,8 +124,9 @@ if __name__ == '__main__':
 
     # Create an OMM stream and register event callbacks
     stream = omm_stream.Definition(
-        name=RIC_CODE, 
-        domain= DOMAIN).get_stream()
+        name = RIC_CODE, 
+        domain = DOMAIN,
+        service = SERVICE).get_stream()
 
     # Define the event callbacks
     # Refresh - the first full image we get back from the server
@@ -141,10 +148,10 @@ if __name__ == '__main__':
     # We should receive the initial Refresh for the current field values
     # followed by updates for the fields as and when they occur
 
-try:
-    while True:
-        time.sleep(1)
-except KeyboardInterrupt:
-    stream.close()
-    # Close the session
-    ld.close_session()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        stream.close()
+        # Close the session
+        ld.close_session()
