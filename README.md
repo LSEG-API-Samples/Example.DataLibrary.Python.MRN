@@ -158,7 +158,53 @@ If you are using the [Anaconda](https://anaconda.org/anaconda/conda)/[Miniconda]
 ### MRN Data Refresh Message
 
 ```json
->>> Refresh event received at 14:05:40.076276
+>>> Refresh event received at 14:04:40.076276
+{
+  "ID": 5,
+  "Type": "Refresh",
+  "Domain": "NewsTextAnalytics",
+  "Key": {
+    "Service": "ELEKTRON_DD",
+    "Name": "MRN_STORY"
+  },
+  "State": {
+    "Stream": "Open",
+    "Data": "Ok"
+  },
+  "Qos": {
+    "Timeliness": "Realtime",
+    "Rate": "JitConflated"
+  },
+  "PermData": "AwEBEAAc",
+  "SeqNumber": 26414,
+  "Fields": {
+    "PROD_PERM": 10001,
+    "ACTIV_DATE": "2025-01-04",
+    "RECORDTYPE": 30,
+    "RDN_EXCHD2": "MRN",
+    "TIMACT_MS": 65276147,
+    "GUID": null,
+    "CONTEXT_ID": 3752,
+    "DDS_DSO_ID": 4232,
+    "SPS_SP_RIC": ".[SPSML2L1",
+    "MRN_V_MAJ": "2",
+    "MRN_TYPE": "STORY",
+    "MDU_V_MIN": null,
+    "MDU_DATE": null,
+    "MRN_V_MIN": "10",
+    "MRN_SRC": "HK1_PRD_A",
+    "MDUTM_NS": null,
+    "FRAG_NUM": 1,
+    "TOT_SIZE": 0,
+    "FRAGMENT": null
+  }
+}
+```
+
+### MRN Data Update Message
+
+```json
+>>> Update event received at 14:05:40.076276
 {
   "ID": 5,
   "Type": "Update",
