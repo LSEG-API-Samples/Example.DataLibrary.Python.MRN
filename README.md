@@ -135,6 +135,24 @@ It is an advisable to create a dedicate Python environment to run each Python pr
 
 If you are using the [Anaconda](https://anaconda.org/anaconda/conda)/[Miniconda](https://docs.anaconda.com/miniconda/) Python distribution, please refer to the [Conda document](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) about how to create a virtual environment using Conda.
 
+## <a id="how_to_run_docker"></a>Bonus: How to run this example with Docker
+
+1. Setup the ```src/lseg_data.config.json``` file based on your preference like the instructions above
+2. Go to the project folder in the console
+3. Run the following command in a console to build an image from a Dockerfile.
+
+    ```bash
+    $> docker build -t mrn_python .
+    ```
+
+4. Once the build is a success, you can create and run the container with the following command
+
+    ```bash
+    $> docker run --name mrn_python -it mrn_python mrn_python
+    ```
+
+5. Press Ctrl+C buttons to stop the application
+
 ## Example Results
 
 ### MRN Data Refresh Message
