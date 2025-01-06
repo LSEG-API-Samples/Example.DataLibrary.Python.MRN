@@ -17,7 +17,8 @@
             "ldp": {
                 "app-key": "YOUR APP KEY GOES HERE!",
                 "username": "YOUR LDP LOGIN OR MACHINE GOES HERE!",
-                "password": "YOUR LDP PASSWORD GOES HERE!"
+                "password": "YOUR LDP PASSWORD GOES HERE!",
+                "signon_control":true
             }
         }
     }

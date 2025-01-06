@@ -3,4 +3,4 @@ __pycache__/
 *$py.class
 ldlib_mrn/
 note.txt
-lseg-data.devrel.config.json
+src/lseg-data.devrel.config.json
