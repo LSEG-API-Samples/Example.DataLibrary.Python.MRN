@@ -1,0 +1,24 @@
+{
+    "logs": {
+        "level": "debug",
+        "transports": {
+            "console": {
+                "enabled": false
+            },
+            "file": {
+                "enabled": false,
+                "name": "lseg-data-lib.log"
+            }
+        }
+    },
+    "sessions": {
+        "default": "platform.ldp",
+        "platform": {
+            "ldp": {
+                "app-key": "YOUR APP KEY GOES HERE!",
+                "username": "YOUR LDP LOGIN OR MACHINE GOES HERE!",
+                "password": "YOUR LDP PASSWORD GOES HERE!"
+            }
+        }
+    }
+}

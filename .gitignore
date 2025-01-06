@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+*$py.class
+ldlib_mrn/
+note.txt
+lseg-data.devrel.config.json
