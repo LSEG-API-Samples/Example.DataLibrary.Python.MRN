@@ -34,11 +34,11 @@ def display_event(eventType, event):
     print("----------------------------------------------------------")
     print(">>> {} event received at {}".format(eventType, currentTime))
     print(json.dumps(event, indent=2))
-    if eventType == "Update":
-        process_mrn_update(event)
+
     return
 
-def process_mrn_update(message_json):  
+def process_mrn_update(eventType, event):  
+        message_json = event
         """Function process Update Message for MRN domain data"""
         fields_data = message_json['Fields']
 
@@ -118,9 +118,13 @@ def process_mrn_update(message_json):
             print('exception: ', sys.exc_info()[0])
 
 if __name__ == '__main__':
-    # Open the data session
-    ld.open_session()
-    #ld.open_session(config_name='./lseg-data.devrel.config.json')
+    try:
+        # Open the data session
+        ld.open_session()
+        #ld.open_session(config_name='./lseg-data.devrel.config.json')
+    except Exception as ex:
+        print("Error in open_session: " + str(ex))
+        sys.exit(1) 
 
     # Create an OMM stream and register event callbacks
     stream = omm_stream.Definition(
@@ -132,8 +136,8 @@ if __name__ == '__main__':
     # Refresh - the first full image we get back from the server
     stream.on_refresh(lambda event, item_stream  : display_event("Refresh", event))
 
-    # Update - as and when field values change, we receive updates from the server
-    stream.on_update(lambda event, item_stream : display_event("Update", event))
+    # Update - as and when field values change, we receive updates from the server and process the MRN data
+    stream.on_update(lambda event, item_stream : process_mrn_update("Update", event))
 
     # Status - if data goes stale or item closes, we get a status message
     stream.on_status(lambda event, item_stream : display_event("Status", event))

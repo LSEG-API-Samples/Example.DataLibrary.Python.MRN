@@ -131,6 +131,42 @@ It is an advisable to create a dedicate Python environment to run each Python pr
 
     $src>
     ```
+
+### How to run this a Notebook example
+
+The project contain both console console application *src/OMMStream-MRN-LD.py* and Jupyter Notebook *src/OMMStream-MRN-LD.ipynb*. In order to run the Notebook example, please follows the steps below.
+
+1. Open the ```src/lseg_data.config.json``` file and add your RTO or RTDS information based on your preference like the suggestion on above section.
+2. Open a command prompt application and go to the project folder
+3. Run the following command in a command prompt to create a new Python virtual environment named *notebook* for the project (the name can be changed based on your preference).
+
+    ```bash
+    $ python -m venv notebook
+    ```
+4. Once the environment creation is succeed, activate a virtual environment with the following command.
+
+    ```bash
+    #Windows
+    $ notebook\Scripts\activate
+
+    #Linux
+    $ source notebook/bin/activate
+
+    #success
+    (notebook)$
+    ```
+5. Run the following command to install the Notebook dependencies in virtual environment.
+
+    ```bash
+    (notebook)$ pip install -r requirements-notebook.txt
+    ```
+
+6. To run a Notebook application run the ```jupyter lab``` command while the ```notebook``` environment is activated, and open the *src/OMMStream-MRN-LD.ipynb* file.
+
+    ```bash
+    (notebook)$ jupyter lab
+    ```
+
 ### Note about the Virtual Environment 
 
 If you are using the [Anaconda](https://anaconda.org/anaconda/conda)/[Miniconda](https://docs.anaconda.com/miniconda/) Python distribution, please refer to the [Conda document](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html) about how to create a virtual environment using Conda.
