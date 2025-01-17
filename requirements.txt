@@ -1,4 +1,4 @@
-anyio==4.7.0
+anyio==4.8.0
 appdirs==1.4.4
 certifi==2024.12.14
 charset-normalizer==3.4.1
@@ -15,7 +15,6 @@ pandas==2.2.3
 pyee==11.1.0
 pyhumps==3.8.0
 python-dateutil==2.9.0.post0
-python-dotenv==1.0.1
 pytz==2024.2
 requests==2.32.3
 scipy==1.12.0
