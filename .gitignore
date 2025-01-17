@@ -4,3 +4,4 @@ __pycache__/
 ldlib_mrn/
 note.txt
 src/lseg-data.devrel.config.json
+mrn_notebook/
