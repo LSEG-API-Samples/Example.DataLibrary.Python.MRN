@@ -1,6 +1,6 @@
 # Machine Readable News Example with LSEG Data Library for Python
 
-- Last update: January 2025
+- Last update: April 2025
 - Compiler: Python
 - Prerequisite: The Real-Time Distribution System or The Real-Time -- Optimized credentials (V1) with MRN service
 
@@ -18,6 +18,29 @@ This example requires the following dependencies.
 4. Internet connection.
 
 Please contact your LSEG representative to help you to access the RTO account and services.
+
+## <a id="rdp_lib"></a>Introduction to the Data Library for Python
+
+The [Data Library for Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python) provides a set of ease-of-use interfaces offering coders uniform access to the breadth and depth of financial data and services available on the Workspace, RDP, and Real-Time Platforms. The API is designed to provide consistent access through multiple access channels and target both Professional Developers and Financial Coders. Developers can choose to access content from the desktop, through their deployed streaming services, or directly to the cloud. With the Data Library, the same Python code can be used to retrieve data regardless of which access point you choose to connect to the platform.
+
+![Figure-1](images/datalib_image.png "Data Library Diagram") 
+
+The Data Library are available in the following programming languages:
+
+- [Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python)
+- [.NET](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-net)
+- [TypeScript](https://developers.lseg.com/en/api-catalog/refinitiv-data-platform/refinitiv-data-library-for-typescript)
+
+For more deep detail regarding the Data Library for Python, please refer to the following articles and tutorials:
+
+- [Quickstart](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python/quick-start).
+- [Documentation](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python/documentation).
+- [Tutorials](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python/tutorials).
+- [GitHub](https://github.com/LSEG-API-Samples/Example.DataLibrary.Python).
+
+### Disclaimer
+
+This project is based on Data Library Python versions **2.1.1**.
 
 ## <a id="news_mrn_overview"></a>Machine Readable News Overview
 
