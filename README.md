@@ -1,6 +1,6 @@
 # Machine Readable News Example with LSEG Data Library for Python
 
-- Last update: April 2025
+- Last update: June 2025
 - Compiler: Python
 - Prerequisite: The Real-Time Distribution System or The Real-Time -- Optimized credentials (V1) with MRN service
 
@@ -196,7 +196,13 @@ If you are using the [Anaconda](https://anaconda.org/anaconda/conda)/[Miniconda]
 
 ## <a id="how_to_run_docker"></a>Bonus: How to run this example with Docker
 
-1. Setup the ```src/lseg_data.config.json``` file based on your preference like the instructions above
+1. Setup a ```src/.env``` file based on your RDP credential with the following content
+
+    ```ini
+    RDP_MACHINEID=MACHINE_ID
+    RDP_PASSWORD=PASSWORD
+    APP_KEY=APP_KEY
+    ```
 2. Go to the project folder in the console
 3. Run the following command in a console to build an image from a Dockerfile.
 
@@ -207,7 +213,7 @@ If you are using the [Anaconda](https://anaconda.org/anaconda/conda)/[Miniconda]
 4. Once the build is a success, you can create and run the container with the following command
 
     ```bash
-    $> docker run --name mrn_python -it mrn_python mrn_python
+    $> docker run -it --env-file .\src\.env --name mrn_python  mrn_python 
     ```
 
 5. Press Ctrl+C buttons to stop the application
