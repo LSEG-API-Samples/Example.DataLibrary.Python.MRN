@@ -24,7 +24,7 @@ ENV PATH=/root/.local:$PATH \
 
 # copy only the dependencies installation from the 1st stage image
 COPY --from=builder /root/.local /root/.local
-COPY src/* .
+COPY src/OMMStream-MRN-LD-Env.py .
 
 #Run Python
-ENTRYPOINT ["python", "OMMStream-MRN-LD.py"]
+ENTRYPOINT ["python", "OMMStream-MRN-LD-Env.py"]

@@ -5,3 +5,4 @@ images/
 ldlib_mrn/
 mrn_notebook/
 src/OMMStream-MRN-LD.ipynb
+.devcontainer/

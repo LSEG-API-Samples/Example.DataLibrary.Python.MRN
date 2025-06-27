@@ -1,0 +1,12 @@
+{
+    "name": "MRN Data Library version 2",
+    "image": "python:3.11-slim-bookworm",
+     "customizations": {
+        "vscode": {
+            "extensions": ["ms-python.python","ms-python.debugpy"]
+        }
+      },
+      "runArgs": ["--env-file=.devcontainer/.env"],
+      "postCreateCommand": "pip install --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org --no-cache-dir --user -r requirements.txt",
+      "shutdownAction":"stopContainer"
+}
