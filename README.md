@@ -1,12 +1,15 @@
 # Machine Readable News Example with LSEG Data Library for Python
 
-- Last update: June 2025
+- Last update: May 2026
 - Compiler: Python
 - Prerequisite: The Real-Time Distribution System or The Real-Time -- Optimized credentials (V1) with MRN service
 
 This example shows how developers may use the [LSEG Data Library for Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python) Delivery layer feature to subscribe to the Machine Readable News (MRN) from LSEG Real-Time Distribution System (RTDS) and LSEG Real-Time Optimized (RTO). The example just connects to LSEG Real-Time platform via a WebSocket connection, then subscribes and displays MRN News data in a console. 
 
-**Note:** The news message is in UTF-8 JSON string format. Some news messages that contain special Unicode character may not be able to show in Windows OS console (cmd, git bash, powershell, etc) due to the OS limitation. Those messages will be print as ```UnicodeEncodeError exception. Cannot decode Unicode character``` message in a console instead.
+**Note:** 
+
+- The news message is in UTF-8 JSON string format. Some news messages that contain special Unicode character may not be able to show in Windows OS console (cmd, git bash, powershell, etc) due to the OS limitation. Those messages will be print as ```UnicodeEncodeError exception. Cannot decode Unicode character``` message in a console instead.
+- This project demonstrates with the Data Library for Python edition. However, the MRN data parsing and assembling concept can be used with the Data Library for TypeScript edition too. 
 
 ## <a id="prerequisite"></a> Prerequisite
 
@@ -45,6 +48,34 @@ This project is based on Data Library Python versions **2.1.1**.
 ## <a id="news_mrn_overview"></a>Machine Readable News Overview
 
 Machine Readable News (MRN) is an advanced service for automating the consumption and systematic analysis of news. It delivers deep historical news archives, ultra-low latency structured news and news analytics directly to your applications. This enables algorithms to exploit the power of news to seize opportunities, capitalize on market inefficiencies, and manage event risk.
+
+## Note For .NET Developers
+
+If you are .NET developers, the [Data Library for .NET](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-net) provides a ready-to-use `MachineReadableNews` object for you. An application can get the MRN streaming news data without extra code like the [Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python) and [TypeScript](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-typescript) editions. 
+
+Example:
+
+```c#
+var definition = MachineReadableNews.Definition();
+
+// Set the datafeed then retrieve a streaming object.
+using (var stream = mrn.NewsDatafeed(feed).GetStream())
+{
+    // Define our real-time processing then open the stream...
+    stream
+        .OnError((err, s) => { })
+        .OnStatus((status, s) => { })
+        .OnNewsStory((newsItem, s) => { })
+        .OnNewsAnalyticsAssets((newsItem, s) => { })
+        .OnNewsAnalyticsEvents((newsItem, s) => { })
+        .Open();
+
+    Console.ReadLine();
+} 
+```
+
+You can see more detail on the [Data Library for .NET - 2.3.06-News-MRN](https://github.com/LSEG-API-Samples/Example.DataLibrary.DotNet/tree/lseg-data-examples/src/2.%20Content/2.3-News/2.3.06-News-MRN) example.
+
 
 ### <a id="mrn_data_model"></a>MRN Data model
 
