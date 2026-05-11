@@ -95,7 +95,7 @@ def process_mrn_update(event):
                         'FRAGMENT': fragment,
                         'MRN_SRC': mrn_src,
                         'FRAG_NUM': frag_num,
-                        "tot_size": tot_size
+                        'tot_size': tot_size
                     }
                 })
                 return None
