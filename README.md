@@ -51,7 +51,7 @@ Machine Readable News (MRN) is an advanced service for automating the consumptio
 
 ## Note For .NET Developers
 
-If you are .NET developers, the [Data Library for .NET](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-net) provides a ready-to-use `MachineReadableNews` object for you. The `MachineReadableNews` object lets an application gets the MRN streaming news data without extra parsing/assembling code like the [Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python) and [TypeScript](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-typescript) editions. 
+If you are .NET developers, the [Data Library for .NET](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-net) provides a ready-to-use `MachineReadableNews` object for you. The `MachineReadableNews` object lets an application gets the MRN streaming news data **without** manual parsing/assembling code like the [Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python) and [TypeScript](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-typescript) editions. 
 
 Example:
 
